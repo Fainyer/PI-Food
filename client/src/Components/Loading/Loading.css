@@ -1,0 +1,196 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 70vw;
+  min-height: 400px;
+  max-height: 100%;
+  min-width: 300px;
+  color: #eee;
+}
+
+.header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 40%, rgba(27, 32, 48, 1) 100%);
+}
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  scale:(1.0, 1.0);
+  transform: translateZ(0);
+  background: #1B2030 url(https://img.freepik.com/fotos-premium/ingredientes-seleccion-alimentos-saludables-sobre-fondo-blanco-madera_35641-3000.jpg?w=2000) 100% 0 no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  animation: grow 360s linear 10ms infinite;
+  transition: all 0.4s ease-in-out;
+  z-index: -2
+}
+
+.header a {
+  color: #eee
+}
+
+.menu {
+  width: 40px;
+  height: 30px;
+  border-radius: 3px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+
+
+.info {
+  flex: 0 0 auto;
+}
+
+.info {
+  width: 100%;
+  padding: 15% 10% 0 10%;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+
+.info h4, .meta {
+  font-size: 0.7em
+}
+
+.meta {
+  font-style: italic;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1) translateY(0px)
+  }
+
+  50% {
+    transform: scale(1.2) translateY(-50px)
+  }
+}
+
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+ }
+ 
+ .cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+ }
+ 
+ .cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+ }
+ 
+ .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+ }
+ 
+ .cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+ }
+ 
+ .cta:hover svg {
+  transform: translateX(0);
+ }
+ 
+ .cta:active {
+  transform: scale(0.95);
+ }
+
+
+
+
+ .slide {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 30px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slide i {
+  opacity: 0;
+  font-size: 13px;
+  transition: 0.2s;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  transition: transform 1;
+}
+
+.slide div {
+  transition: transform 0.8s;
+}
+
+.slide:hover div {
+  transform: translateX(-6px);
+}
+
+.slide::after {
+  content: "";
+  background-color: #66f2d5;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+}
+
+.slide:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
